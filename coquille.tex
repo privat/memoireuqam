@@ -1,0 +1,70 @@
+\documentclass[12pt]{memoireuqam1.3}
+
+\usepackage{graphicx}% Pour les figures
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc} % Pour utiliser les caractères accentués
+\usepackage[T1]{fontenc}
+\usepackage{url}
+%\input macro  % Pour les définitions personnelles
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%
+% Pour la page titre
+%%%%%%%%%%%%%%%%%%%%
+\title{Mon titre}
+% Votre nom complet tel qu'il apparaît à votre dossier du registrariat de l'UQAM
+\author{Mon nom}
+% Année et mois courant sauf si spécifié autrement pas \degreemonth et \degreeyear
+%\degreemonth{mois du dépôt}
+%\degreeyear{année du dépôt}
+\uqammemoire %% ou \uqamthese ou \uqamrapport
+\matiere{mathématiques}
+\concentration{texte de la concentration}
+% exemple \concentration{concentration informatique mathématique}
+
+
+\thispagestyle{empty}        % La page titre n'est pas numérotée
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%
+% Page préliminaires
+%%%%%%%%%%%%%%%%%%%%
+\renewcommand \bibname{R\'EF\'ERENCES}% FACULTATIF
+%si vous voulez qu'apparaisse le titre RÉFÉRENCES plutôt que BIBLIOGRAPHIE
+
+\renewcommand \listfigurename{LISTE DES FIGURES}
+\renewcommand \appendixname{APPENDICE}
+\renewcommand \figurename{Figure}
+\renewcommand \tablename{Tableau}
+
+\pagenumbering{roman} % numérotation des pages en chiffres romains
+\addtocounter{page}{1} % Pour que les remerciements commencent à la page ii
+\include{remerciements}
+\tableofcontents % Pour générer la table des matières
+\listoftables % Pour générer la liste des tableaux
+\listoffigures % Pour générer la liste des figures
+\include{resume}
+% Utilisez l'environnement  abstract pour rédiger votre résumé
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Document principal
+%%%%%%%%%%%%%%%%%%%%
+
+\include{Introduction}
+% Utilisez l'environnement  introduction pour rédiger votre introduction
+\include{Chap1}
+\include{Chap2}
+\include{Chap3}
+\include{Conclusion}
+% Utilisez l'environnement  conclusion pour rédiger votre conclusion
+
+%%%%%%%%%%%%%%%%%%%%
+% Page liminaires
+%%%%%%%%%%%%%%%%%%%%
+
+\include{annexe1}
+\bibliographystyle{apalike-uqam}
+\bibliography{ma-biblio}
+\end{document}

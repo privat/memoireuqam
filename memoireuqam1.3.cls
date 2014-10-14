@@ -13,6 +13,7 @@
 
 % Modifications:
 % octobre 2014 - Jean Privat
+% ajout d'espacement vertical élastique pour éviter les ligne veuves et orphelines
 % ajout de \uqamproposethese
 % janvier 2014
 % definition de \setstretch, \doublespacing, doublespace si le package setspace n'est pas chargé
@@ -66,7 +67,7 @@
 \newlength{\simpleinter}
 \setlength{\simpleinter}{\baselineskip}
 \newlength{\doubleinter}
-\setlength{\doubleinter}{1.5\baselineskip}
+\setlength{\doubleinter}{1.5\baselineskip plus 1mm minus 1mm}
 
 %%%%%%%  Set up margins and formatting params %%%
 

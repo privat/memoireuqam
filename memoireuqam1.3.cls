@@ -5,12 +5,15 @@
 % collaborateurs: Stephane Poirier, Rene Ferland,
 %                  Luc Belanger, Andre Lauzon
 %                  Jerome Tremblay, Anthony Monnet
+%                  Jean Privat
 
 %  for dull, boring thesis format:
 %       \documentclass[12pt]{memoireuqam1.3}
 %
 
 % Modifications:
+% octobre 2014 - Jean Privat
+% ajout de \uqamproposethese
 % janvier 2014
 % definition de \setstretch, \doublespacing, doublespace si le package setspace n'est pas chargé
 % décembre 2013
@@ -594,6 +597,12 @@ July\or August\or September\or October\or November\or December\fi}}
    \gdef\thesetype{TH\`ESE}
    \gdef\theseprog{DU DOCTORAT EN \expandafter\MakeUppercase\expandafter{\@matiere}}
    \gdef\accord{E}
+}
+\def\uqamproposethese{
+   %\isthesistrue
+   \gdef\thesetype{PROPOS\'E DE TH\`ESE}
+   \gdef\theseprog{DU DOCTORAT EN \expandafter\MakeUppercase\expandafter{\@matiere}}
+   \gdef\accord{}
 }
 \def\uqammemoire{
    %\isthesisfalse
